@@ -26,19 +26,19 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
-            <label>Name:</label>
-            <input type="input" name="name">
+            <label  class="input-group-text">Name:</label>
+            <input class="form-control" type="input" name="name">
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price">
+            <label  class="input-group-text" >List Price:</label>
+            <input class="form-control" type="input" name="price">
             <br>        
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input class="form-control" type="file" name="image" accept="image/*" />
             <br>
             
-            <label>&nbsp;</label>
+            <label  >&nbsp;</label>
             <input type="submit" value="Add Record">
             <br>
         </form>

@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACAA,2BAA2B;ACA3B,wBAAwB;ACAxB,uBAAuB;ACAvB,yBAAyB;ACAzB,0BAA0B;ACA1B,yBAAyB;AACzB,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,IAAI;CACzB;;AAED,AAAA,EAAE,CAAC;EACC,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "main.scss",
+        "_variable.scss",
+        "_fonts.scss",
+        "_body.scss",
+        "_footer.scss",
+        "_sidebar.scss",
+        "_header.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,9 +1,9 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=shop-images';
+    $dsn = 'mysql:host=localhost;dbname=project_tyong';
     $username = 'root';
-    $password = 'root';
+    $password = ''; 
 
-    try {
+    try {       
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();

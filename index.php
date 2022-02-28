@@ -44,25 +44,12 @@ include('includes/header.php');
 ?>
 <h1>Record List</h1>
 
-<aside>
-<!-- display a list of categories -->
-<h2>Categories</h2>
-<nav>
-<ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
-</a>
-</li>
-<?php endforeach; ?>
-</ul>
-</nav>          
-</aside>
 
 <section>
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
-<table>
+<table class="table">
+    <thead class="table-dark">
 <tr>
 <th>Image</th>
 <th>Name</th>
@@ -70,6 +57,8 @@ include('includes/header.php');
 <th>Delete</th>
 <th>Edit</th>
 </tr>
+</thead>
+    <tbody>
 <?php foreach ($records as $record) : ?>
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
@@ -81,7 +70,7 @@ id="delete_record_form">
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
+<input class="btn btn-danger" type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
@@ -89,10 +78,11 @@ id="delete_record_form">
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
+<input class="btn btn-primary" type="submit" value="Edit">
 </form></td>
 </tr>
 <?php endforeach; ?>
+</tbody>
 </table>
 <p><a href="add_record_form.php">Add Record</a></p>
 <p><a href="category_list.php">Manage Categories</a></p>
