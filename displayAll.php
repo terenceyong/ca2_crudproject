@@ -54,7 +54,7 @@ include('includes/header.php');
 
 <section>
 <!-- display a table of records -->
-<h2>All records</h2>
+<h2 class = "categoryfont">All records</h2>
 <table class="table">
     <thead class="table-dark">
 <tr>
