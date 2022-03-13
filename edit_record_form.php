@@ -26,22 +26,22 @@ include('includes/header.php');
                    
             <label  class="input-group-text">Category ID:</label>
             <input class="form-control"  type="category_id" name="category_id" 
-                   value="<?php echo $records['categoryID']; ?>" required>
+                   value="<?php echo $records['categoryID']; ?>" placeholder = "Category ID only"required>
             <br>
 
             <label  class="input-group-text">Name:</label>
             <input  class="form-control" type="input" name="name"
-                   value="<?php echo $records['name']; ?>" required>
+                   value="<?php echo $records['name']; ?>" placeholder="Name only"required>
             <br>
 
             <label  class="input-group-text">Allergens:</label>
             <input  class="form-control" type="input" name="allergens"
-                   value="<?php echo $records['allergens']; ?>" required>
+                   value="<?php echo $records['allergens']; ?>" placeholder= "Food Allergens only"required>
             <br>
 
             <label class="input-group-text">List Price:</label>
             <input  class="form-control" type="input" name="price"
-                   value="<?php echo $records['price']; ?>" required>
+                   value="<?php echo $records['price']; ?>" placeholder= "Price only" required>
             <br>
             <div class="input-group mb-3">
             <label class="input-group-text">Image:</label>
