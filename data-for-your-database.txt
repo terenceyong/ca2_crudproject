@@ -1,8 +1,33 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 13, 2022 at 02:49 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ca2`
+--
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `categories`
 --
 
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL
@@ -18,14 +43,18 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (3, 'Japanese Cuisine'),
 (4, 'Thai food');
 
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `records`
 --
 
+DROP TABLE IF EXISTS `records`;
 CREATE TABLE `records` (
   `recordID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `allergens` varchar(200) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -34,7 +63,25 @@ CREATE TABLE `records` (
 -- Dumping data for table `records`
 --
 
-INSERT INTO `records` (`recordID`, `categoryID`, `allergens` `name`, `price`, `image`) VALUES
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `allergens`, `price`, `image`) VALUES
+(1, 1, 'Taco', 'Peanuts, tree nuts, soybeans, wheat, milk, eggs, fish, and shellfish', '13.00', '507235.jpg'),
+(2, 1, 'Burrito', 'Cereals ,Wheat,  Soy, Milk, Mustard', '12.00', '583400.jpg'),
+(3, 1, 'Quesadilla', 'Wheat, Milk, Fish, Soy', '18.00', '207325.jpg'),
+(4, 1, 'Enchiladas', 'Gluten, Corn, Milk and Soy', '10.00', '601709.jpg'),
+(5, 2, 'Irish stew', 'Allergy-Friendly', '16.00', '669220.jpg'),
+(14, 3, 'Ramen', 'Sesame, Wheat, Soy', '12.00', '772750.jpg'),
+(15, 3, 'Teriyaki Sushi Roll', '	Sesame, Soy', '12.00', '273162.jpg'),
+(17, 3, 'Cooked Tuna and Avocado Roll', 'Egg, Fish, Soy, Sesame', '10.00', '593906.jpg'),
+(18, 3, 'Crispy Chicken Roll', 'Wheat, Egg, Soy, Sesame', '8.00', '892039.jpg'),
+(19, 3, 'California Roll', 'Wheat, Egg, Fish, Sesame', '13.00', '283059.jpg'),
+(20, 2, ' Colcannon and Champ', 'Milk', '20.00', '254450.jpg'),
+(21, 2, 'Full Irish Breakfast', 'Milk, Nuts, Gluten, Soybeans, Celery, Eggs, Sulphur dioxide and sulphites', '15.00', '75170.jpg'),
+(22, 2, 'Breakfast roll', 'Milk, Gluten, Eggs, Sulphur dioxide and sulphites', '6.00', '342438.jpg'),
+(23, 4, 'Chicken Green Curry', '	Crustaceans, Sulphur dioxide and sulphites', '15.50', '884242.jpg'),
+(24, 4, 'Beef Green Curry', '	Crustaceans, Sulphur dioxide and sulphites', '15.50', '623566.jpg'),
+(25, 4, 'King Prawn Green Curry', 'Crustaceans, Sulphur dioxide and sulphites', '17.50', '479171.jpg'),
+(26, 4, 'Chicken Red Curry', '	Crustaceans, Sulphur dioxide and sulphites', '15.50', '381057.jpg'),
+(27, 4, 'Beef Red Curry', '	Crustaceans, Sulphur dioxide and sulphites', '15.50', '51053.jpg');
 
 --
 -- Indexes for dumped tables
@@ -54,4 +101,9 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
