@@ -31,12 +31,13 @@ include('includes/header.php');
 
             <label  class="input-group-text">Name:</label>
             <input  class="form-control" type="input" name="name"
-                   value="<?php echo $records['name']; ?>" pattern = "[a-zA-Z0-9]+"placeholder="Name only"required>
+                   value="<?php echo $records['name']; ?>" onBlur = "name_validation();" onBlur = "name_validation()" pattern = "[a-zA-Z0-9]+"placeholder="Name only"required>
+                   <span id="name_err"></span>
             <br>
 
             <label  class="input-group-text">Allergens:</label>
             <input  class="form-control" type="input" name="allergens"
-                   value="<?php echo $records['allergens']; ?>" pattern = "[a-zA-Z0-9]+" placeholder= "Food Allergens only"required>
+                   value="<?php echo $records['allergens']; ?>"placeholder= "Food Allergens only"required>
             <br>
 
             <label class="input-group-text">List Price:</label>
@@ -45,7 +46,7 @@ include('includes/header.php');
             <br>
             <div class="input-group mb-3">
             <label class="input-group-text">Image:</label>
-            <input class="form-control" type="file" name="image" accept="image/*" required/>
+            <input class="form-control" type="file" name="image" accept="image/*"/>
             <br>            
             <!-- <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>

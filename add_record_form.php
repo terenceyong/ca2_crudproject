@@ -27,11 +27,13 @@ include('includes/header.php');
             </select>
             <br>
             <label  class="input-group-text">Name:</label>
-            <input  class="form-control"  pattern = "[a-zA-Z0-9]+" placeholder = "Add food name only" type="input" pattern = "[a-zA-Z0-9]+" id="name " name="name" required/>
-            <br>
+            <input  class="form-control" id="name " name="name" onBlur = "name_validation();" placeholder = "Add food name only"  type="input" pattern = "[a-zA-Z0-9]+"  required/>
+            <span id="name_err"></span>
+            <br>    
 
             <label  class="input-group-text" >Allergens:</label>
-            <input  placeholder = "Food allergens" class="form-control" type="input" pattern = "[a-zA-Z0-9]+" name="allergens"  required>
+            <input  placeholder = "Food allergens" class="form-control" type="input"  name="allergens"  required>
+            <span id="al_err"></span>
             <br>      
             
             <label  class="input-group-text" >List Price:</label>
@@ -39,7 +41,7 @@ include('includes/header.php');
             <br>     
             
             <label>Image:</label>
-            <input class="form-control" type="file" name="image" accept="image/*" required >
+            <input class="form-control" type="file" name="image" accept="image/*">
             <br>
             
             <label  >&nbsp;</label>
