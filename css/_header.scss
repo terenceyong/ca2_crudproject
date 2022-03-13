@@ -1,10 +1,11 @@
 /*header style go here */
-header {
-    background-color: blue;
+.navbar-brand{
+   font-family: $titlefont ;
+   font-size: 40px;
+   padding-right:75%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+.logo {
+    width: 10%;
+    height: 20%;
+}

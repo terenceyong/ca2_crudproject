@@ -1,16 +1,25 @@
 /*variable style go here */
 /*fonts style go here */
 /*body style go here */
+body {
+  background-color: #7d94b5;
+}
+
+.container {
+  background-color: #b6c199;
+}
+
 /*footer style go here */
 /*sidebar style go here */
 /*header style go here */
-header {
-  background-color: blue;
+.navbar-brand {
+  font-family: "League Gothic", sans-serif;
+  font-size: 40px;
+  padding-right: 75%;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.logo {
+  width: 10%;
+  height: 20%;
 }
 /*# sourceMappingURL=main.css.map */

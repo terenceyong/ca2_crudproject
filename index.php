@@ -37,12 +37,12 @@ $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
+
 ?>
 <div class="container">
 <?php
 include('includes/header.php');
 ?>
-<h1>Record List</h1>
 
 
 <section>
@@ -53,6 +53,7 @@ include('includes/header.php');
 <tr>
 <th>Image</th>
 <th>Name</th>
+<th>Allergens</th>
 <th>Price</th>
 <th>Delete</th>
 <th>Edit</th>
@@ -63,6 +64,7 @@ include('includes/header.php');
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
+<td><?php echo $record['allergens']; ?></td>
 <td class="right"><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
@@ -84,8 +86,6 @@ value="<?php echo $record['categoryID']; ?>">
 <?php endforeach; ?>
 </tbody>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
 </section>
 <?php
 include('includes/footer.php');

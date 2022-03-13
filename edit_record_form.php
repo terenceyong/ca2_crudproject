@@ -34,6 +34,11 @@ include('includes/header.php');
                    value="<?php echo $records['name']; ?>">
             <br>
 
+            <label  class="input-group-text">Allergens:</label>
+            <input  class="form-control" type="input" name="allergens"
+                   value="<?php echo $records['allergens']; ?>">
+            <br>
+
             <label class="input-group-text">List Price:</label>
             <input  class="form-control" type="input" name="price"
                    value="<?php echo $records['price']; ?>">
