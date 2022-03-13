@@ -27,15 +27,15 @@ include('includes/header.php');
             </select>
             <br>
             <label  class="input-group-text">Name:</label>
-            <input  class="form-control"  pattern = "[a-zA-Z0-9]+" placeholder = "Add food name only" type="input" id="name " name="name" required/>
+            <input  class="form-control"  pattern = "[a-zA-Z0-9]+" placeholder = "Add food name only" type="input" pattern = "[a-zA-Z0-9]+" id="name " name="name" required/>
             <br>
 
             <label  class="input-group-text" >Allergens:</label>
-            <input  placeholder = "Food allergens" class="form-control" type="input" name="allergens"  required>
+            <input  placeholder = "Food allergens" class="form-control" type="input" pattern = "[a-zA-Z0-9]+" name="allergens"  required>
             <br>      
             
             <label  class="input-group-text" >List Price:</label>
-            <input  placeholder = "Food price" class="form-control" type="input" name="price" required>
+            <input  placeholder = "Food price" class="form-control" pattern = "(0\.((0[1-9]{1})|([1-9]{1}([0-9]{1})?)))|(([1-9]+[0-9]*)(\.([0-9]{1,2}))?)"type="input" name="price" required>
             <br>     
             
             <label>Image:</label>

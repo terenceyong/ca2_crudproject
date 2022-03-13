@@ -31,17 +31,17 @@ include('includes/header.php');
 
             <label  class="input-group-text">Name:</label>
             <input  class="form-control" type="input" name="name"
-                   value="<?php echo $records['name']; ?>" placeholder="Name only"required>
+                   value="<?php echo $records['name']; ?>" pattern = "[a-zA-Z0-9]+"placeholder="Name only"required>
             <br>
 
             <label  class="input-group-text">Allergens:</label>
             <input  class="form-control" type="input" name="allergens"
-                   value="<?php echo $records['allergens']; ?>" placeholder= "Food Allergens only"required>
+                   value="<?php echo $records['allergens']; ?>" pattern = "[a-zA-Z0-9]+" placeholder= "Food Allergens only"required>
             <br>
 
             <label class="input-group-text">List Price:</label>
             <input  class="form-control" type="input" name="price"
-                   value="<?php echo $records['price']; ?>" placeholder= "Price only" required>
+                   value="<?php echo $records['price']; ?>" pattern = "(0\.((0[1-9]{1})|([1-9]{1}([0-9]{1})?)))|(([1-9]+[0-9]*)(\.([0-9]{1,2}))?)" placeholder= "Price only" required>
             <br>
             <div class="input-group mb-3">
             <label class="input-group-text">Image:</label>
