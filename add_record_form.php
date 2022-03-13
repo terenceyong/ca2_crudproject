@@ -27,7 +27,7 @@ include('includes/header.php');
             </select>
             <br>
             <label  class="input-group-text">Name:</label>
-            <input placeholder = "Food name" class="form-control" type="input" id="name " name="name" required/>
+            <input  class="form-control"  pattern = "[a-zA-Z0-9]+" placeholder = "Add food name only" type="input" id="name " name="name" required/>
             <br>
 
             <label  class="input-group-text" >Allergens:</label>
