@@ -1,6 +1,8 @@
 # Food court CRUD project
 A starter project for DkIT students on the Server-Side module.
 
+![intro](https://user-images.githubusercontent.com/66771015/158066196-fa783d31-aa7b-405e-acc9-20536743f0de.jpg)
+
 ### Instructions
 * Create a MySQL database called php-crud in PHP MyAdmin
 * Run the code in the sql-db.txt file in PHP MyAdmin
