@@ -46,6 +46,67 @@ include('includes/header.php');
 
 
 <section>
+<div class="wrapper">
+<form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark" type="submit" name="submit" >Search</button>
+      </form>
+	<?php 
+		if(isset($_POST['submit'])){ 
+			if(isset($_GET['go'])){ 
+				if(preg_match("/^[  a-zA-Z]+/", $_POST['name'])){ 
+					$name=$_POST['name']; 
+					//connect  to the database 
+					$db=mysql_connect  ("localhost", "root", "") or die ('I cannot connect to the database  because: ' . mysql_error()); 
+					//-select  the database to use 
+					$mydb=mysql_select_db("ca2"); 
+					//-query  the database table 
+                    $searchValue = $_POST['search'];
+					$sql = "SELECT * FROM records WHERE price LIKE '%$searchValue%'";
+					//-run  the query against the mysql query function 
+					$result=mysql_query($sql); 
+					//-create  while loop and loop through result set 
+					if(mysql_num_rows($result) > 0){
+						while($row=mysql_fetch_array($result)){ 
+						$category_id=$row['category_id'];
+							$name =$row['name']; 
+							$allergens =$row['allergens']; 
+							$price=$row['price'];
+							$image=$row['image'];
+						
+							//-display the result of the array 
+							echo "<table class='table table-bordered table-striped table-hover '>";
+								echo "<thead>";
+									echo "<tr>";
+										echo "<th>Image</th>";
+										echo "<th>Name</th>";
+										echo "<th>Allergens</th>";
+										echo "<th>Price</th>";
+									echo "</tr>";
+								echo "</thead>";
+								echo "<tbody>";
+									echo "<tr>";
+										echo "<td>" . $row['image'] . "</td>";
+										echo "<td>" . $row['name'] . "</td>";
+										echo "<td>" . $row['allergens'] . "</td>";
+										echo "<td>" . $row['price'] . "</td>";
+									echo "</tr>";
+								echo "</tbody>";                            
+							echo "</table>";
+							echo "<p><a href='index.php' class='btn btn-primary'>Back</a></p>";
+						} 
+					} else {
+						echo "<p>No matches found</p>";
+						echo "<p><a href='index.php' class='btn btn-primary'>Back</a></p>";
+					}
+				} else { 
+					echo  "<p>Please enter a search query</p>"; 
+					echo "<p><a href='index.php' class='btn btn-primary'>Back</a></p>";
+				} 
+			} 
+		} 
+	?> 
+	</div>
 <!-- display a table of records -->
 <h2 class = "categoryfont"><?php echo $category_name; ?></h2>
 <table class="table">
