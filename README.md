@@ -1,5 +1,5 @@
 # Food court CRUD project
-A starter project for DkIT students on the Server-Side module.
+
 
 ![intro](https://user-images.githubusercontent.com/66771015/158066196-fa783d31-aa7b-405e-acc9-20536743f0de.jpg)
 
