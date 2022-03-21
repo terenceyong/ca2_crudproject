@@ -62,15 +62,15 @@ include('includes/header.php');
 							$sql = "SELECT * FROM records WHERE name LIKE '%$searchValue%'";
 
                             $result = $con->query($sql);
-                            while ($row = $result->fetch_assoc()) {
+                            if ($row = $result->fetch_assoc()) {
                                 echo "<h1>Search Result</h1>";
                                echo "<table class='table'>";
                                 echo "<thead class='table-dark'>";
                             echo "<tr>";
                             
                             echo "<th>Name</th>";
-                            echo   "<th>Allergens</th>";
-                            echo  " <th>Price</th>";
+                            echo   "<th>Price</th>";
+                            echo  " <th>Allergens</th>";
                             echo     "</tr>";
                             echo     "</thead>";
                             echo         "<tbody>";

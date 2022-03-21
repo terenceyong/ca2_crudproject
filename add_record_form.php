@@ -27,13 +27,12 @@ include('includes/header.php');
             </select>
             <br>
             <label  class="input-group-text">Name:</label>
-            <input  class="form-control" id="name " name="name" onBlur = "name_validation();" placeholder = "Add food name only"  type="input" pattern = "[a-zA-Z0-9]+"  required/>
+            <input  class="form-control"  name="name" id="name " size="12" onBlur = "name_validation();" pattern = "[a-zA-Z0-9]+" placeholder = "Add food name only"  type="input" pattern = "[a-zA-Z0-9]+"  required/>
             <span id="name_err"></span>
             <br>    
 
             <label  class="input-group-text" >Allergens:</label>
-            <input  placeholder = "Food allergens" class="form-control" type="input"  name="allergens"  required>
-            <span id="al_err"></span>
+            <input  placeholder = "Food allergens" class="form-control" type="input" pattern="^[A-Za-zÀ-ÿ ,.'-]+$"  name="allergens"  required>
             <br>      
             
             <label  class="input-group-text" >List Price:</label>
